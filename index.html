@@ -3,415 +3,246 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jeansel Lantigua — Software Developer</title>
+  <title>Jeansel Lantigua — Websites and portals</title>
+  <meta name="description" content="Jeansel Lantigua designs and builds websites and staff portals for small organizations. Highbridge Voices is a live example." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">JL</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-      <a href="#contact" class="nav-cta">Let's Talk</a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="#work" class="sidebar-mark">JL</a>
+      <p class="sidebar-name">Jeansel Lantigua</p>
+      <p class="sidebar-role">Websites for small organizations</p>
     </div>
-    <div class="nav-mobile" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-grid">
-      <div class="hero-content" data-animate>
-        <p class="hero-eyebrow">Software Developer · Full-Stack · Bronx, NY</p>
-        <h1 class="hero-name">Jeansel<br /><em>Lantigua</em></h1>
-        <p class="hero-bio">
-          I build full-stack web applications that solve real problems for real communities.
-          Experienced with React, Node.js, PostgreSQL, and everything in between —
-          and always looking for the next challenge.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary">See My Work</a>
-          <a href="#contact" class="btn-outline">Get In Touch</a>
-        </div>
-        <div class="hero-links">
-          <a href="https://github.com/Jeanselantigua" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/jeansel-lantigua/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap" data-animate data-delay="200">
-        <div class="hero-photo-frame">
-          <img src="headshot.png" alt="Image of Jeansel Lantigua">
-          <div class="photo-placeholder">
-            <span>Your Photo Here</span>
-            <p>Replace with &lt;img src="photo.jpg" alt="Jeansel Lantigua" /&gt;</p>
-          </div>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num" data-count="40">0</span><span class="stat-plus">+</span>
-            <span class="stat-label">Students Taught</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-count="3">0</span>
-            <span class="stat-label">Projects Shipped</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num" data-count="2">0</span>
-            <span class="stat-label">Courses Built</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <nav class="sidebar-nav" aria-label="Page sections">
+      <a href="#work">Work</a>
+      <a href="#case">Case study</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">About</span>
-        <h2 class="section-title">Who I Am</h2>
+    <div class="sidebar-foot">
+      <p class="sidebar-place">Bronx, NY</p>
+      <a class="sidebar-mail" href="mailto:lantiguajeansel@gmail.com">lantiguajeansel@gmail.com</a>
+    </div>
+  </aside>
+
+  <header class="mobile-bar">
+    <a href="#work" class="sidebar-mark">JL</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="main">
+
+    <section id="work" class="hero">
+      <p class="eyebrow">Freelance web design and development</p>
+      <h1>A public site people can use. A site people will actually open.</h1>
+      <p class="lede">
+        I design and build websites for small organizations — and the internal tools behind them when email and spreadsheets stop working.
+        The window below is the Highbridge Voices homepage, live at
+        <a href="https://www.highbridgevoices.org" target="_blank" rel="noopener">highbridgevoices.org</a>.
+      </p>
+
+      <div class="browser" data-animate>
+        <div class="browser-chrome">
+          <div class="browser-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="browser-tab">highbridgevoices.org</p>
+          <a class="browser-open" href="https://www.highbridgevoices.org" target="_blank" rel="noopener">Open live site ↗</a>
+        </div>
+        <div class="browser-url" aria-hidden="true">
+          <span class="browser-lock"></span>
+          <span>https://www.highbridgevoices.org</span>
+        </div>
+        <a class="browser-stage" href="https://www.highbridgevoices.org" target="_blank" rel="noopener">
+          <img
+            class="browser-shot"
+            src="hbv-homepage.jpg"
+            alt="Highbridge Voices homepage: Inspiring Excellence Through Music, with benefit concert and enrollment cards"
+          />
+        </a>
       </div>
-      <div class="about-grid" data-animate>
-        <div class="about-text">
+    </section>
+
+    <section id="case">
+      <p class="eyebrow">Case study</p>
+      <h2>Highbridge Voices</h2>
+      <p class="lede">
+        A Bronx youth choir needed a public website that could take applications and donations,
+        and a private portal so staff and students were not running the year out of inboxes and spreadsheets.
+        I was the only developer. Both are in production at
+        <a href="https://www.highbridgevoices.org" target="_blank" rel="noopener">highbridgevoices.org</a>.
+      </p>
+
+      <div class="psr" data-animate>
+        <article>
+          <h3>Problem</h3>
           <p>
-            I'm a full-stack developer based in the Bronx with hands-on experience building
-            and deploying production web applications. My work at HighBridge Voices gave me
-            real-world experience owning an entire product — from database schema to deployed UI —
-            serving both students and staff.
+            The public site was a WordPress leftover that was hard to update. Concert pages, program applications,
+            and donation flows kept breaking or lagging behind the season. Inside the organization, rehearsal music
+            lived in shared drives, the calendar was wherever someone last emailed it, and attendance and roster
+            work happened off-site.
           </p>
+        </article>
+        <article>
+          <h3>Solution</h3>
           <p>
-            I'm fluent in JavaScript across the stack (React, Node.js, Express) and comfortable
-            working with relational databases like PostgreSQL. I care about writing clean,
-            maintainable code and shipping things that actually work.
+            I rebuilt the public site — programs, apply, donate, benefit concert, news — and built a staff/student
+            portal on React, Node, Express, and PostgreSQL. JWT login with roles. Announcements, calendar, choir
+            tracks (unique IDs, A–Z, filter by voice part), roster, attendance, applications, and a music/audio library.
+            Deployed on Vercel and Railway. I still ship the seasonal pages.
           </p>
+        </article>
+        <article>
+          <h3>Result</h3>
           <p>
-            Beyond building software, I've taught Java and web development to over 40 students —
-            which sharpened my ability to communicate technical concepts clearly, a skill I bring
-            to every team environment.
+            Staff and students use the portal during the school year. The public site handles enrollment and fundraising
+            without a second vendor. When the benefit concert needed tickets, ads, and an electronic journal, those
+            went onto the same site instead of a one-off tool.
           </p>
-        </div>
-        <div class="about-highlights">
-          <div class="highlight-card">
-            <span class="highlight-icon">⚙️</span>
-            <div>
-              <strong>Full-Stack Development</strong>
-              <p>End-to-end ownership from database design to deployed frontend.</p>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <span class="highlight-icon">🔐</span>
-            <div>
-              <strong>Auth & Security</strong>
-              <p>Role-based access control, JWT sessions, and secure API design.</p>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <span class="highlight-icon">🚀</span>
-            <div>
-              <strong>Deployment & DevOps</strong>
-              <p>Comfortable shipping to Vercel, Railway, and managing production environments.</p>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <span class="highlight-icon">🧠</span>
-            <div>
-              <strong>Problem Solver</strong>
-              <p>OOP, data structures, and algorithmic thinking applied to real use cases.</p>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section-alt">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Skills</span>
-        <h2 class="section-title">Technical Stack</h2>
+      <dl class="facts" data-animate>
+        <div>
+          <dt>Client</dt>
+          <dd>Highbridge Voices — afterschool choir, South Bronx</dd>
+        </div>
+        <div>
+          <dt>What shipped</dt>
+          <dd>Public site + staff/student portal</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Sole designer and developer, Aug 2024–present</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>React, Vite, Node, Express, PostgreSQL, JWT, Vercel, Railway, Supabase</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="services">
+      <p class="eyebrow">Services</p>
+      <h2>Three ways to hire me</h2>
+      <p class="lede">
+        Pick the tier that matches the job. If you need a poster or a logo pack, I am not the person.
+        If you need a site — or something with moving parts behind it — I am.
+      </p>
+
+      <div class="tiers" data-animate>
+        <article class="tier">
+          <p class="tier-name">Personal site</p>
+          <p class="tier-price">$2,500</p>
+          <p class="tier-who">A public site for one person — freelancer, consultant, artist, or job-seeker. Who you are, what you have done, how to reach you.</p>
+          <ul>
+            <li>One long page or 3–5 pages, designed and built</li>
+            <li>Mobile layout</li>
+            <li>Contact form</li>
+            <li>Launch on hosting I set up</li>
+            <li>Two rounds of revisions</li>
+          </ul>
+        </article>
+
+        <article class="tier tier-mark">
+          <p class="tier-flag">Where most organizations land</p>
+          <p class="tier-name">Organization site</p>
+          <p class="tier-price">$6,000</p>
+          <p class="tier-who">Programs, events, applications, donations, and pages that change through the year. Typical for a school, clinic, or nonprofit that needs more than a personal page.</p>
+          <ul>
+            <li>Everything in Personal</li>
+            <li>Apply / donate / event flows</li>
+            <li>A structure staff can keep updating</li>
+            <li>Seasonal pages (events, enrollment, campaigns)</li>
+            <li>Four weeks of post-launch fixes</li>
+          </ul>
+        </article>
+
+        <article class="tier">
+          <p class="tier-name">Custom</p>
+          <p class="tier-price"><a class="tier-talk" href="#contact">Let’s talk</a></p>
+          <p class="tier-who">Bookings, e-commerce, memberships, internal tools, or anything with moving parts. Price depends on the job.</p>
+          <ul>
+            <li>Scoped to what you need</li>
+            <li>Accounts, payments, or dashboards if the work needs them</li>
+            <li>Timeline set together</li>
+            <li>Ongoing support available</li>
+            <li>Quote after we map the work</li>
+          </ul>
+        </article>
       </div>
-      <div class="skills-categories" data-animate>
+    </section>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Languages</h3>
-          <div class="skill-chips">
-            <span class="chip">JavaScript</span>
-            <span class="chip">Java</span>
-            <span class="chip">Python</span>
-            <span class="chip">C++</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-          </div>
-        </div>
+    <section id="process">
+      <p class="eyebrow">Process</p>
+      <h2>How the work actually goes</h2>
+      <p class="lede">
+        Same sequence for every job — a personal site, an organization site, or something custom.
+        If a step is missing, the site looks finished and then nobody can run it.
+      </p>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Frontend</h3>
-          <div class="skill-chips">
-            <span class="chip">React</span>
-            <span class="chip">Vite</span>
-            <span class="chip">Next.js</span>
-            <span class="chip">Responsive Design</span>
-          </div>
-        </div>
+      <ol class="steps" data-animate>
+        <li>
+          <h3>Map how you work today</h3>
+          <p>
+            Who visits, who updates the site, what people need to find, fill out, or buy.
+            I write that down before I open a design file. A personal site, a clinic, and a membership tool
+            all start here — the answers are just different.
+          </p>
+        </li>
+        <li>
+          <h3>Draw the pages</h3>
+          <p>
+            Sitemap first. If the job has bookings, a shop, accounts, or a dashboard, the flows and
+            fields come next so we are not inventing them in week six. You see the structure and say
+            what is wrong while it is still simple to change.
+          </p>
+        </li>
+        <li>
+          <h3>Build it and put it in front of you</h3>
+          <p>
+            I design and develop the thing myself. You get a staging URL and click through before
+            we go live and before any old site comes down, if there is one.
+          </p>
+        </li>
+        <li>
+          <h3>Stay after launch</h3>
+          <p>
+            Sites do not freeze on launch day. Events, products, forms, and new pages show up later.
+            I keep a maintenance relationship so those land on the same site instead of a new vendor
+            each time.
+          </p>
+        </li>
+      </ol>
+    </section>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Backend</h3>
-          <div class="skill-chips">
-            <span class="chip">Node.js</span>
-            <span class="chip">Express</span>
-            <span class="chip">REST APIs</span>
-            <span class="chip">JWT Auth</span>
-            <span class="chip">CRUD</span>
-          </div>
-        </div>
+    <section id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Email me the job</h2>
+      <p class="lede">
+        Say which tier you think you are, who the site is for, and when you need it live.
+        I read everything. If it is a bad fit I will say so.
+      </p>
+      <a class="contact-email" href="mailto:lantiguajeansel@gmail.com">lantiguajeansel@gmail.com</a>
+    </section>
 
-        <div class="skill-group">
-          <h3 class="skill-group-title">Database & Infra</h3>
-          <div class="skill-chips">
-            <span class="chip">PostgreSQL</span>
-            <span class="chip">Supabase</span>
-            <span class="chip">Railway</span>
-            <span class="chip">Vercel</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3 class="skill-group-title">Concepts</h3>
-          <div class="skill-chips">
-            <span class="chip">OOP</span>
-            <span class="chip">Data Structures</span>
-            <span class="chip">Algorithms</span>
-            <span class="chip">Git / Version Control</span>
-            <span class="chip">Debugging</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Experience</span>
-        <h2 class="section-title">Where I've Worked</h2>
-      </div>
-      <div class="timeline">
-
-        <div class="timeline-item" data-animate>
-          <div class="timeline-meta">
-            <span class="timeline-date">Aug 2024 — Present</span>
-            <span class="timeline-location">Bronx, NY</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Front-End Web Content Specialist</h3>
-            <p class="timeline-company">HighBridge Voices</p>
-            <ul class="timeline-bullets">
-              <li>Designed, built, and deployed a full-stack staff and student portal used in production, featuring role-based authentication with JWT, an interactive program calendar, announcements system, and a staff-only music library.</li>
-              <li>Implemented CRUD operations on a PostgreSQL database — songs receive unique IDs, are sorted alphabetically, and can be filtered by voice parts.</li>
-              <li>Maintain and update the public-facing website at highbridgevoices.org, adding new pages, UI improvements, and ensuring the application and donation flows work correctly.</li>
-              <li>Sole developer on the project — owned architecture decisions, deployment pipeline (Railway + Vercel), and ongoing maintenance.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="chip chip-sm">React</span>
-              <span class="chip chip-sm">Vite</span>
-              <span class="chip chip-sm">Node.js</span>
-              <span class="chip chip-sm">Express</span>
-              <span class="chip chip-sm">PostgreSQL</span>
-              <span class="chip chip-sm">JWT</span>
-              <span class="chip chip-sm">Supabase</span>
-              <span class="chip chip-sm">Vercel</span>
-              <span class="chip chip-sm">Railway</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item" data-animate>
-          <div class="timeline-meta">
-            <span class="timeline-date">Aug 2024 — Present</span>
-            <span class="timeline-location">Bronx, NY</span>
-          </div>
-          <div class="timeline-body">
-            <h3 class="timeline-role">Coding Instructor</h3>
-            <p class="timeline-company">HighBridge Voices at Brilla Pax</p>
-            <ul class="timeline-bullets">
-              <li>Designed and teach a Java Backend Development curriculum and a Web Development curriculum for students in grades 5–12.</li>
-              <li>Taught 40+ students across classes of 10–25, focusing on code reading, writing, debugging, and real problem-solving skills.</li>
-              <li>Created hands-on projects that build foundational programming skills and developer confidence.</li>
-            </ul>
-            <div class="timeline-tags">
-              <span class="chip chip-sm">Java</span>
-              <span class="chip chip-sm">HTML/CSS/JS</span>
-              <span class="chip chip-sm">Curriculum Design</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section-alt">
-    <div class="container">
-      <div class="section-header" data-animate>
-        <span class="section-tag">Projects</span>
-        <h2 class="section-title">Things I've Built</h2>
-      </div>
-      <div class="projects-grid">
-
-        <div class="project-card featured" data-animate>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <span class="project-badge">Featured</span>
-              <div class="project-links-top">
-                <a href="https://github.com/Jeanselantigua/HighBridge-Voices-Portal" target="_blank" rel="noopener" title="Source code">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                </a>
-                <a href="https://high-bridge-voices-portal.vercel.app" target="_blank" rel="noopener" title="Live site">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-name">HighBridge Voices Website and Portal</h3>
-            <p class="project-desc">
-              Production full-stack portal serving students and staff. Built with role-based authentication,
-              JWT sessions, an interactive calendar, announcements, and a music library with full CRUD —
-              sorted by voice part and alphabetically. Sole developer from schema to deployment.
-            </p>
-            <div class="project-stack">
-              <span class="chip chip-sm">React</span>
-              <span class="chip chip-sm">Vite</span>
-              <span class="chip chip-sm">Express</span>
-              <span class="chip chip-sm">PostgreSQL</span>
-              <span class="chip chip-sm">Railway</span>
-              <span class="chip chip-sm">Supabase</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-animate>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <div class="project-links-top">
-                <a href="https://github.com/Jeanselantigua/music-library" target="_blank" rel="noopener" title="Source code">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-name">Music Library API</h3>
-            <p class="project-desc">
-              Standalone REST API and React frontend for choir repertoire management.
-              Full CRUD — create, search, update, and archive pieces by title, composer,
-              and voice part. Later reused and extended as a module inside the Voices Portal.
-            </p>
-            <div class="project-stack">
-              <span class="chip chip-sm">React</span>
-              <span class="chip chip-sm">Node.js</span>
-              <span class="chip chip-sm">Express</span>
-              <span class="chip chip-sm">PostgreSQL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-animate>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <div class="project-links-top">
-                <a href="https://github.com/Jeanselantigua/mine-sweeper" target="_blank" rel="noopener" title="Source code">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-name">Minesweeper — Java</h3>
-            <p class="project-desc">
-              Fully functional Minesweeper clone with a Swing GUI. Implements random mine
-              placement, recursive cell reveal, win/lose detection, and replayability.
-              Demonstrates strong OOP fundamentals and Java GUI development.
-            </p>
-            <div class="project-stack">
-              <span class="chip chip-sm">Java</span>
-              <span class="chip chip-sm">Swing GUI</span>
-              <span class="chip chip-sm">OOP</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-animate>
-          <div class="project-card-inner">
-            <div class="project-top">
-              <div class="project-links-top">
-                <a href="https://github.com/Jeanselantigua" target="_blank" rel="noopener" title="GitHub">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-name">School Database System</h3>
-            <p class="project-desc">
-              Java-based record management system that reads CSV files to populate student,
-              staff, and professor records. Full CRUD with dynamic file parsing and structured
-              data storage. Demonstrates file I/O, OOP design, and data management.
-            </p>
-            <div class="project-stack">
-              <span class="chip chip-sm">Java</span>
-              <span class="chip chip-sm">CSV Parsing</span>
-              <span class="chip chip-sm">OOP</span>
-              <span class="chip chip-sm">CRUD</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-wrap" data-animate>
-        <div class="section-header">
-          <span class="section-tag">Contact</span>
-          <h2 class="section-title">Let's Work Together</h2>
-        </div>
-        <p class="contact-intro">
-          I'm actively looking for software developer roles. Whether you have an opportunity,
-          a project, or just want to connect — my inbox is open.
-        </p>
-        <a href="mailto:lantiguajeansel@gmail.com" class="contact-email">lantiguajeansel@gmail.com</a>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/jeansel-lantigua/" target="_blank" rel="noopener" class="btn-outline">LinkedIn ↗</a>
-          <a href="https://github.com/Jeanselantigua" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
-          <a href="resume.pdf" target="_blank" rel="noopener" class="btn-outline">Resume ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-inner">
+    <footer>
       <span>© 2026 Jeansel Lantigua</span>
-      <span>Built from scratch · Bronx, NY</span>
-    </div>
-  </footer>
+      <span>Bronx, NY</span>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>

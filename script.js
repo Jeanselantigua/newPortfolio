@@ -1,3 +1,43 @@
+const THEME_KEY = "theme";
+const themeToggles = document.querySelectorAll("[data-theme-toggle]");
+
+function currentTheme() {
+  return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  const next = theme === "dark" ? "light" : "dark";
+  themeToggles.forEach((button) => {
+    button.setAttribute("aria-pressed", String(theme === "dark"));
+    button.setAttribute("aria-label", `Switch to ${next} theme`);
+    const label = button.querySelector(".theme-toggle-text");
+    if (label) label.textContent = next.charAt(0).toUpperCase() + next.slice(1);
+  });
+}
+
+function setTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch (e) {}
+  applyTheme(theme);
+}
+
+applyTheme(currentTheme());
+
+themeToggles.forEach((button) => {
+  button.addEventListener("click", () => {
+    setTheme(currentTheme() === "dark" ? "light" : "dark");
+  });
+});
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+  try {
+    if (localStorage.getItem(THEME_KEY)) return;
+  } catch (e) {}
+  applyTheme(event.matches ? "dark" : "light");
+});
+
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menuBtn");
 const backdrop = document.getElementById("navBackdrop");

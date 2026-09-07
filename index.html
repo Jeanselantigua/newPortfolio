@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored === "dark" || stored === "light"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
   <title>Jeansel Lantigua — Websites and portals</title>
   <meta name="description" content="Jeansel Lantigua designs and builds websites and staff portals for small organizations. Highbridge Voices is a live example." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +44,16 @@
     </nav>
 
     <div class="sidebar-foot">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+        <svg class="icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M13.2 10.4A5.8 5.8 0 0 1 5.6 2.8 6.2 6.2 0 1 0 13.2 10.4z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="8" cy="8" r="2.75" />
+          <path d="M8 1.5v1.4M8 13.1v1.4M1.5 8h1.4M13.1 8h1.4M3.2 3.2l1 1M11.8 11.8l1 1M3.2 12.8l1-1M11.8 4.2l1-1" />
+        </svg>
+        <span class="theme-toggle-text">Dark</span>
+      </button>
       <p class="sidebar-place">Bronx, NY</p>
       <a class="sidebar-mail" href="mailto:lantiguajeansel@gmail.com">lantiguajeansel@gmail.com</a>
     </div>
@@ -36,9 +61,20 @@
 
   <header class="mobile-bar">
     <a href="#work" class="sidebar-mark">JL</a>
-    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
-      <span></span><span></span>
-    </button>
+    <div class="mobile-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+        <svg class="icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M13.2 10.4A5.8 5.8 0 0 1 5.6 2.8 6.2 6.2 0 1 0 13.2 10.4z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="8" cy="8" r="2.75" />
+          <path d="M8 1.5v1.4M8 13.1v1.4M1.5 8h1.4M13.1 8h1.4M3.2 3.2l1 1M11.8 11.8l1 1M3.2 12.8l1-1M11.8 4.2l1-1" />
+        </svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
   <div class="nav-backdrop" id="navBackdrop" hidden></div>
 
@@ -48,7 +84,7 @@
       <p class="eyebrow">Freelance web design and development</p>
       <h1>A public site people can use. A site people will actually open.</h1>
       <p class="lede">
-        I design and build websites for small organizations — and the internal tools behind them when email and spreadsheets stop working.
+        I design and build websites for small organizations and the internal tools behind them when email and spreadsheets stop working.
         The window below is the Highbridge Voices homepage, live at
         <a href="https://www.highbridgevoices.org" target="_blank" rel="noopener">highbridgevoices.org</a>.
       </p>
@@ -91,14 +127,14 @@
           <p>
             The public site was a WordPress leftover that was hard to update. Concert pages, program applications,
             and donation flows kept breaking or lagging behind the season. Inside the organization, rehearsal music
-            lived in shared drives, the calendar was wherever someone last emailed it, and attendance and roster
-            work happened off-site.
+            lived in messy unsorted cabinets and spreadsheets that kept dissapearing, the calendar was wherever someone last emailed it, and attendance and roster
+            work happened offsite.
           </p>
         </article>
         <article>
           <h3>Solution</h3>
           <p>
-            I rebuilt the public site — programs, apply, donate, benefit concert, news — and built a staff/student
+            I rebuilt the public site programs, apply, donate, benefit concert, news and built a staff/student
             portal on React, Node, Express, and PostgreSQL. JWT login with roles. Announcements, calendar, choir
             tracks (unique IDs, A–Z, filter by voice part), roster, attendance, applications, and a music/audio library.
             Deployed on Vercel and Railway. I still ship the seasonal pages.
@@ -107,9 +143,9 @@
         <article>
           <h3>Result</h3>
           <p>
-            Staff and students use the portal during the school year. The public site handles enrollment and fundraising
-            without a second vendor. When the benefit concert needed tickets, ads, and an electronic journal, those
-            went onto the same site instead of a one-off tool.
+            Staff and students use the portal during the school year. The public site handles enrollment and fundraising.
+             When the benefit concert needed tickets, ads, and an electronic journal, those
+            went onto the same site instead of a one off tool.
           </p>
         </article>
       </div>

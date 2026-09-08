@@ -1,4 +1,4 @@
-const THEME_KEY = "theme";
+const THEME_KEY = "jl-portfolio-theme";
 const themeToggles = document.querySelectorAll("[data-theme-toggle]");
 
 function currentTheme() {

@@ -57,7 +57,15 @@ menuBtn.addEventListener("click", () => {
 backdrop.addEventListener("click", () => setMenu(false));
 
 sidebar.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => setMenu(false));
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    const target = href && href.startsWith("#") ? document.querySelector(href) : null;
+    setMenu(false);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    history.replaceState(null, "", href);
+  });
 });
 
 document.addEventListener("keydown", (event) => {

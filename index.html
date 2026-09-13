@@ -18,7 +18,7 @@
       } catch (e) {}
     })();
   </script>
-  <title>Jeansel Lantigua — Websites and portals</title>
+  <title>Jeansel Lantigua — Full Stack Developer</title>
   <meta name="description" content="Jeansel Lantigua designs and builds websites and staff portals for small organizations. Highbridge Voices is a live example." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +38,7 @@
     <nav class="sidebar-nav" aria-label="Page sections">
       <a href="#work">Work</a>
       <a href="#case">Case study</a>
+      <a href="#pastry">Pastry Shop</a>
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
@@ -166,6 +167,83 @@
         <div>
           <dt>Stack</dt>
           <dd>React, Vite, Node, Express, PostgreSQL, JWT, Vercel, Railway, Supabase</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="pastry">
+      <p class="eyebrow">Selected work</p>
+      <h2>Pastry Shop</h2>
+      <p class="lede">
+        A bakery storefront I designed and built as a reusable template: public menu, cart,
+        Stripe checkout or pay on pickup, email order notices, and an admin dashboard.
+        The live demo is not hosted yet. When it is, this window will open it.
+      </p>
+
+      <div class="browser" data-animate>
+        <div class="browser-chrome">
+          <div class="browser-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="browser-tab">Pastry Shop Template</p>
+               <a class="browser-open" href="https://pastry-shop-fw15qn287-jeansel-lantiguas-projects.vercel.app" target="_blank" rel="noopener">Open live demo ↗</a>
+          <!-- <span class="browser-open is-soon">Live demo coming</span> -->
+        </div>
+        <div class="browser-url" aria-hidden="true">
+          <span class="browser-lock"></span>
+          <span>pastry shop — local template</span>
+        </div>
+        <div class="browser-stage browser-stage--pastry">
+          <img
+            class="browser-shot"
+            src="pastry-shop.png"
+            alt="Pastry Shop menu: croissant, tart, and cookie cards with prices and add-to-cart buttons"
+          />
+        </div>
+      </div>
+
+      <div class="psr" data-animate>
+        <!-- <article>
+          <h3>Problem</h3>
+          <p>
+            A bakery still taking orders by message and cash at the counter has no one place
+            to publish a menu, take pickup orders, and see what came in.
+          </p>
+        </article>
+        <article>
+          <h3>Solution</h3>
+          <p>
+            I built the storefront, cart, and checkout on HTML, CSS, and JS, with Node, Express,
+            and PostgreSQL behind it. Stripe for card payments, pay-on-pickup as the other path,
+            Nodemailer for order mail, and an admin login for the queue. Menu and prices live in
+            one file so the shop and the server stay in sync.
+          </p>
+        </article>
+        <article>
+          <h3>Result</h3>
+          <p>
+            A template a shop can put their name, photos, and hours on and run. I will host
+            a working demo next so this page can point at it the same way Highbridge Voices does.
+          </p>
+        </article> -->
+      </div>
+
+      <dl class="facts" data-animate>
+        <div>
+          <dt>Type</dt>
+          <dd>Reusable bakery template, not a client site</dd>
+        </div>
+        <div>
+          <dt>What shipped</dt>
+          <dd>Storefront, cart, Stripe, pickup orders, admin</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Sole designer and developer</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>HTML, CSS, JS, Node, Express, PostgreSQL, Stripe, Nodemailer</dd>
         </div>
       </dl>
     </section>

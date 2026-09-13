@@ -309,6 +309,10 @@ h2 {
 
 .browser-open:hover { color: var(--ink); }
 
+.browser-open.is-soon {
+  pointer-events: none;
+}
+
 .browser-url {
   display: flex;
   align-items: center;
@@ -349,6 +353,10 @@ h2 {
   background: #2d0609;
   line-height: 0;
   text-decoration: none;
+}
+
+.browser-stage--pastry {
+  background: #faf6ef;
 }
 
 .browser-shot {
